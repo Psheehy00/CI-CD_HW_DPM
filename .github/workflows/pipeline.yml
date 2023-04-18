@@ -84,10 +84,10 @@ jobs:
           name: python-app
           path: .
 
-      - name: "Deploy to Azure Web App"
+      - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: "patsheehyCICD"
-          slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILEPATSHEEHY163 }}
+          app-name: 'patsheehyCICD'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_917B70F0FBAF4B7CB5C349743276F7D9 }}
