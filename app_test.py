@@ -66,6 +66,12 @@ def test_home_page(client):
     print(" -- home page loads functional test")
     assert b"Loan Calculator" in response.data
 
+def test_404_error_handling():
+    client = app.test_client()
+    response = client.get('/nonexistent-page')
+    assert response.status_code == 404
+    print(response.data)
+    
 def test_404_page(client):
     """
     GIVEN a user tries to visit a resource that doesn't exist
